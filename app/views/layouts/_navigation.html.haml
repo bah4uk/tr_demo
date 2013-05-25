@@ -1,12 +1,14 @@
 = link_to "Danci Ivan, Tr-1 Demo", root_path, :class => 'brand'
-%ul.nav.pull-right
+- unless user_signed_in?
+  = link_to image_tag("/images/facebook-icon.png", :style => 'vertical-align: middle; width: 22px; height: 22px; margin-top:12px'), user_omniauth_authorize_path(:facebook)
+
+%ul.nav
   - if user_signed_in?
     %li
       = link_to 'Logout', destroy_user_session_path, :method=>'delete'
   - else
     %li
       = link_to 'Login', new_user_session_path
-      = link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook)
   - if user_signed_in?
     %li
       = link_to 'Edit account', edit_user_registration_path
