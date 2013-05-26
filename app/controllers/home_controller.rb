@@ -20,6 +20,6 @@ private
       hashik = {:name => name, :path => path}
       refs << hashik
     end
-    refs
+    refs.sort_by { |k| k[:name] }
   end
 end
