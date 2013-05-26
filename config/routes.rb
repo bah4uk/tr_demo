@@ -7,4 +7,5 @@ TrDemo::Application.routes.draw do
   resources :users
 
   match '/registered_users', controller: 'home', action: 'registered_users'
+  match '/banners', controller: 'home', action: 'banners'
 end

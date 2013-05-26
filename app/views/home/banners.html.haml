@@ -1,0 +1,20 @@
+:css
+  #carousel {
+  width: 450px;
+  }
+#carousel.carousel
+  .carousel-inner
+    .item.active
+      %img{:alt => "Some Alt Text", :src => "/banners/01.jpg"}
+      .carousel-caption
+        Some caption
+    .item
+      %img{:alt => "Some Alt Text", :src => "/banners/02.jpg"}
+      .carousel-caption
+        Some caption
+    .item
+      %img{:alt => "Some Alt Text", :src => "/banners/03.jpg"}
+      .carousel-caption
+        Some caption
+  %a.carousel-control.left{"data-slide" => "prev", :href => "#carousel"} &lsaquo;
+  %a.carousel-control.right{"data-slide" => "next", :href => "#carousel"} &rsaquo;

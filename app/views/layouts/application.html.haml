@@ -1,3 +1,8 @@
+:css
+  .bottombar {
+    position: fixed;
+    bottom: 5px;
+    }
 !!!
 %html
   %head
@@ -20,6 +25,7 @@
             .span12
               = render 'layouts/messages'
               = yield
-          %footer
+          %footer.bottombar.content
+            = link_to image_tag("/banners/rent.jpg", :style => 'vertical-align: middle; width: 940px; height: 90px;'), "http://rent-a-car.com"
       / ! end of .container
     / ! end of #main

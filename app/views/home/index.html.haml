@@ -1,5 +1,32 @@
-%h3 Home
-- @refs.each do |ref|
-  %p
-    = ref[:name]
-    = link_to 'Download', ref[:path], :target => '_blank'
+:css
+  #carousel {
+  width: 450px;
+  }
+.row-fluid
+  .span6
+    %h3 Home
+    - @refs.each do |ref|
+      %p
+        = ref[:name]
+        = link_to 'Download', ref[:path], :target => '_blank'
+  
+  .span6
+    #carousel.carousel
+      .carousel-inner
+        .item.active
+          = link_to image_tag("/banners/01.jpg"), "http://travel.com"
+          / %img{:alt => "Some Alt Text", :src => "/banners/01.jpg"}
+          .carousel-caption
+            Travel with us
+        .item
+          = link_to image_tag("/banners/02.jpg"), "http://travel.com"
+          / %img{:alt => "Some Alt Text", :src => "/banners/02.jpg"}
+          .carousel-caption
+            Cheapest tickets
+        .item
+          = link_to image_tag("/banners/03.jpg"), "http://travel.com"
+          / %img{:alt => "Some Alt Text", :src => "/banners/03.jpg"}
+          .carousel-caption
+            Hot tours
+      %a.carousel-control.left{"data-slide" => "prev", :href => "#carousel"} &lsaquo;
+      %a.carousel-control.right{"data-slide" => "next", :href => "#carousel"} &rsaquo;

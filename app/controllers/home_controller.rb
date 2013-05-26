@@ -7,6 +7,10 @@ class HomeController < ApplicationController
     @users = User.all
   end
 
+  def banners
+
+  end
+
 private
   def generate_links
     refs = []
