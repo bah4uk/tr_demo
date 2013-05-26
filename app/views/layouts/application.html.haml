@@ -5,7 +5,9 @@
     right: 15%;
     left: 15%;
   }
-
+  .centertext{
+    text-align:center;
+  }
 !!!
 %html
   %head
@@ -28,7 +30,7 @@
             .span12
               = render 'layouts/messages'
               = yield
-          %footer.bottombar.content
+          %footer.bottombar.content.centertext
             = link_to image_tag("/images/rent.jpg", :style => 'vertical-align: middle;'), "http://rent-a-car.com"
       / ! end of .container
     / ! end of #main
