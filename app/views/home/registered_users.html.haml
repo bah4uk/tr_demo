@@ -1,0 +1,4 @@
+- unless @users.empty?
+  - @users.each do |user|
+    %p
+      User: #{link_to user.name, user}

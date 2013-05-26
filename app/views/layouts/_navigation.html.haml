@@ -3,7 +3,11 @@
   = link_to image_tag("/images/facebook-icon.png", :style => 'vertical-align: middle; width: 22px; height: 22px; margin-top:12px'), user_omniauth_authorize_path(:facebook)
 
 %ul.nav
+  %li
+    = link_to 'Home', root_path
   - if user_signed_in?
+    %li
+      = link_to 'List users', registered_users_path
     %li
       = link_to 'Logout', destroy_user_session_path, :method=>'delete'
   - else

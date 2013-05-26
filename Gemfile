@@ -20,7 +20,7 @@ gem "hub", ">= 1.10.2", :require => nil, :group => [:development]
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-vkontakte'
-
+gem 'snooby'
 
 group :development, :test do
   gem 'sqlite3'
