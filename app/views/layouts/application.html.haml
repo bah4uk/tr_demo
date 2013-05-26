@@ -1,8 +1,11 @@
 :css
   .bottombar {
     position: fixed;
-    bottom: 5px;
-    }
+    bottom: 15px;
+    right: 15%;
+    left: 15%;
+  }
+
 !!!
 %html
   %head
@@ -26,6 +29,6 @@
               = render 'layouts/messages'
               = yield
           %footer.bottombar.content
-            = link_to image_tag("/images/rent.jpg", :style => 'vertical-align: middle; width: 940px; height: 90px;'), "http://rent-a-car.com"
+            = link_to image_tag("/images/rent.jpg", :style => 'vertical-align: middle;'), "http://rent-a-car.com"
       / ! end of .container
     / ! end of #main
